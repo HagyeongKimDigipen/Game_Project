@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\GUGUENGINE\main.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="Level1.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level2.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level3.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level4.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level5.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level6.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level8.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level9.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level10.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level11.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level12.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level13.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="DigipenLogo.cpp">
+      <Filter>Transition</Filter>
+    </ClCompile>
+    <ClCompile Include="FmodLogo.cpp">
+      <Filter>Transition</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Option.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelSelect.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="startCutscene.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="99.cpp">
+      <Filter>Transition</Filter>
+    </ClCompile>
+    <ClCompile Include="endingcut.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level14.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Loading.cpp">
+      <Filter>Transition</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="Level1.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level2.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level3.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level4.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level5.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level6.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level8.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level9.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level10.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level11.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level12.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level13.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="DigipenLogo.h">
+      <Filter>Transition</Filter>
+    </ClInclude>
+    <ClInclude Include="FmodLogo.h">
+      <Filter>Transition</Filter>
+    </ClInclude>
+    <ClInclude Include="Option.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSelect.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="startCutscene.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="99.h">
+      <Filter>Transition</Filter>
+    </ClInclude>
+    <ClInclude Include="endingcut.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level14.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Loading.h">
+      <Filter>Transition</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Level">
+      <UniqueIdentifier>{0499f403-0280-474e-8f87-878334c008d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transition">
+      <UniqueIdentifier>{68855285-4985-47eb-96e4-31970e64a341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{ba56a9df-9a2b-4c9e-aa7a-274391db677d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
