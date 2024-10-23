@@ -121,7 +121,7 @@ private:
 
 	std::vector<FVector> finalLocation;
 
-	std::vector<FVector> susu;
+	std::vector<FVector> monster;
 
 	FTimerHandle WaitHandle;
 	FTimerHandle WaitHandle2;

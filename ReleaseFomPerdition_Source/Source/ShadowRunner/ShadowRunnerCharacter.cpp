@@ -202,14 +202,6 @@ AShadowRunnerCharacter::AShadowRunnerCharacter()
 	muzzleParticleRef = nullptr;
 	muzzleParticleDisplayTime = 8.0f;
 
-	//sibal = GetGameInstance();
-
-	//static ConstructorHelpers::FClassFinder<UGameInstance> hihi(TEXT("/Game/BluePrints/ShadowRunnerGameInstance_BP.ShadowRunnerGameInstance_BP_C"));
-	//WidgetUIClass = WidgetUIBPClass.Class;
-	//sibal->FindFunction(TEXT("Get Volume"));
-	//FOutputDeviceNull hiww;
-	//float his = sibal->CallFunctionByNameWithArguments(TEXT("Get Volume"), hiww, this);
-
 	volumeControlEnemy = soundControl;
 
 	ConstructorHelpers::FObjectFinder<UMaterialParameterCollection>objectType(TEXT("/Game/Assets/Materials/mpc_PostProcess"));

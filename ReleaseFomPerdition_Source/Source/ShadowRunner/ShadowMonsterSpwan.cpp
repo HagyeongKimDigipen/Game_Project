@@ -68,7 +68,7 @@ FVector AShadowMonsterSpwan::GetRandomPointInVolume()
 			location.Y = this->GetActorLocation().Y;
 		}
 
-		susu.push_back(location);
+		monster.push_back(location);
 	}
 
 	return location;
@@ -95,7 +95,6 @@ void AShadowMonsterSpwan::BeginPlay()
 	NavArea = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
 	GetRandomPointInVolume2();
 	GetRandomPointInVolume();
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("wow sibal")));
 
 	//CharacterStartPosition = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
 }
@@ -130,7 +129,7 @@ void AShadowMonsterSpwan::Tick(float DeltaTime)
 				{
 					for (int i = 0; i < maxSpawnCount; i++)
 					{
-						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, susu[i]);
+						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, monster[i]);
 					}
 				}
 
@@ -187,7 +186,7 @@ void AShadowMonsterSpwan::Tick(float DeltaTime)
 				{
 					for (int i = 0; i < maxSpawnCount; i++)
 					{
-						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, susu[i]);
+						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, monster[i]);
 					}
 				}
 
@@ -353,7 +352,7 @@ void AShadowMonsterSpwan::Tick(float DeltaTime)
 
 void AShadowMonsterSpwan::SpawnObject()
 {
-	if (susu.size() > 0)
+	if (monster.size() > 0)
 	{
 		for (int i = 0; i < maxSpawnCount; i++)
 		{
@@ -375,7 +374,7 @@ void AShadowMonsterSpwan::SpawnObject()
 
 			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
-			AEnemyCharacter* SpawnMon = GetWorld()->SpawnActor<AEnemyCharacter>(WhatToSpawn, susu[i], SpawnRotation, SpawnParams);
+			AEnemyCharacter* SpawnMon = GetWorld()->SpawnActor<AEnemyCharacter>(WhatToSpawn, monster[i], SpawnRotation, SpawnParams);
 
 			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("X %d"), SpawnMon->GetActorLocation().X));
 			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Y %d"), SpawnMon->GetActorLocation().Y));

@@ -54,8 +54,6 @@ AShadowMagicSpawn::AShadowMagicSpawn()
 	//Particle_ability->SetTemplate()
 	//Particle_ability = LoadObject<UBlueprint>(nullptr, *PrticleName)->GeneratedClass;
 	//WhatToSpawn = LoadObject<UBlueprint>(nullptr, TEXT("/Content/BluePrints/AIMagician/AIMagic_BP"))->GeneratedClass;
-	//FOutputDeviceNull sibal;
-	//WhatToSpawn->CallFunctionByNameWithArguments(*name, sibal, NULL, true);
 	//WhatToSpawn = LoadClass<AAIMagic>(NULL, TEXT("/Content/BluePrints/AIMagic_BP"), NULL, LOAD_None, NULL);
 	//WhatToSpawn = Cast<AAIMagic>(StaticLoadObject(AAIMagic::StaticClass(), NULL, *name));
 	//static ConstructorHelpers::FObjectFinder<UClass> PawnObject(*name);
@@ -75,7 +73,7 @@ FVector AShadowMagicSpawn::GetRandomPointInVolume()
 			location.Y = this->GetActorLocation().Y;
 		}
 
-		susu.push_back(location);
+		monster.push_back(location);
 	}
 
 	return location;
@@ -126,7 +124,7 @@ void AShadowMagicSpawn::Tick(float DeltaTime)
 				{
 					for (int i = 0; i < maxSpawnCount; i++)
 					{
-						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, susu[i]);
+						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, monster[i]);
 					}
 				}
 				GetWorld()->GetTimerManager().SetTimer(WaitHandle2, FTimerDelegate::CreateLambda([&]() { this->SpawnObject(); }), spawnTime2, false);
@@ -177,7 +175,7 @@ void AShadowMagicSpawn::Tick(float DeltaTime)
 				{
 					for (int i = 0; i < maxSpawnCount; i++)
 					{
-						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, susu[i]);
+						particleComp[i] = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), Particle_ability, monster[i]);
 					}
 				}
 
@@ -256,7 +254,7 @@ void AShadowMagicSpawn::Tick(float DeltaTime)
 
 void AShadowMagicSpawn::SpawnObject()
 {
-	if (susu.size() > 0)
+	if (monster.size() > 0)
 	{
 		for (int i = 0; i < maxSpawnCount; i++)
 		{
@@ -276,7 +274,7 @@ void AShadowMagicSpawn::SpawnObject()
 
 			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
-			AAIMagic* SpawnMon = GetWorld()->SpawnActor<AAIMagic>(WhatToSpawn, susu[i], SpawnRotation, SpawnParams);
+			AAIMagic* SpawnMon = GetWorld()->SpawnActor<AAIMagic>(WhatToSpawn, monster[i], SpawnRotation, SpawnParams);
 
 			if (SpawnMon != NULL)
 			{

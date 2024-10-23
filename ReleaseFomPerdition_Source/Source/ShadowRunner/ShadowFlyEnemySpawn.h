@@ -96,7 +96,7 @@ private:
 	std::vector<bool> checkEenmyHealthOnce;
 	std::vector<FVector> spawnLocations;
 
-	std::vector<FVector> susu;
+	std::vector<FVector> monster;
 
 	FTimerHandle WaitHandle;
 	FTimerHandle WaitHandle2;
